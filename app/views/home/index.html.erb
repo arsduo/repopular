@@ -1,0 +1,12 @@
+<h1>Repos for <%= user.name %></h1>
+
+<%= form_tag "/home/update_repos" do %>
+  <% @repos.each do |r| %>
+    <div>
+      <%= check_box_tag "repos[]", r["id"] %>
+      <%= r["name"] %>
+    </div>
+  <% end %>
+
+  <%= submit_tag "Update repos" %>
+<% end %>

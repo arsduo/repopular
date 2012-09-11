@@ -1,0 +1,9 @@
+<h1>Login</h1>
+
+<% unless user && user.facebook? %>
+  First you log in with Facebook...
+  <%= link_to "Facebook Login", "/auth/facebook" %>
+<% else %>
+  Then you log in with Github...
+  <%= link_to "Github Login", "/auth/github" %>
+<% end %>
