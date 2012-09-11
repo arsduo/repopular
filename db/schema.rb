@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(:version => 20120911131521) do
 
+  create_table "repos", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "full_name"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "fb_id"
