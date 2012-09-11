@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   def github
     unless @user = session[:user]
       session[:gh_data] = auth_hash
-      redirect_to "/auth/facebook"
+      redirect_to "/auth/facebook" and return
     end
 
     setup_gh_data
