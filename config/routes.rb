@@ -1,3 +1,8 @@
 Repopular::Application.routes.draw do
-  match '/auth/:provider/callback', to: 'sessions#create'
+  get "sessions/facebook"
+
+  get "sessions/github"
+
+  match '/auth/facebook/callback', to: 'sessions#facebook'
+  match '/auth/github/callback',   to: 'sessions#github'
 end
