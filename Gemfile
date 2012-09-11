@@ -8,6 +8,7 @@ gem "omniauth"
 gem "omniauth-github"
 gem "omniauth-facebook"
 gem "pg"
+gem "octokit"
 
 # Gems used only for assets and not required
 # in production environments by default.
